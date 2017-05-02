@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<script src="w3-script.js"></script>
+<link rel="icon" type="gif" href="custom.gif" >
+</head>
+
+<style>
+.mySlides {display:none;}
+
+    
+.image {
+  opacity: .5;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: lightyellow;
+  color: black;
+font-family: 'Poiret One', cursive;
+  font-size: 16px;
+  padding: 16px 32px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+  
+    
+h1{
+font-family: 'Poiret One', cursive;
+font-size: 40px;
+}
+
+
+.mycontent_body {
+         margin: 3px;
+         padding: 3px;
+         min-height: 400px;
+      }
+
+.myblock1 {
+    width: 300px;
+    height: 500px;
+    }     
+        
+   
+    
+    
+</style>
+
+<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+<a href="javascript:void(0)" onclick="w3_close()" 
+  class="w3-closenav w3-large">Close &times;</a>
+  <a href="#">Black and White</a>
+  <a href="#">Arizona</a>
+  <a href="#">Chicago</a>
+  <a href="#">Scenery</a>
+    
+</nav>
+
+<header class="w3-container w3-white w3-border-bottom w3-border-yellow">
+    <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+        <div class="w3-row">
+            <div class="w3-container w3-full w3-white">
+                <div class="container">
+                    <center><img src="pro2.gif" style="width:20%"></center>
+                    <div class="middle">
+                        <div class="text">About Me</div>
+                </div>
+                                       
+                    <h1 class= "w3-animate-fading"><center>Ashton Leigh Photography</center></h1>
+            </div>
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+            </header>     
+      
+<body>
+    
+
+<div class="w3-row-padding">
+    <div class="w3-col m4 myblock1">
+        <img src="ian2.jpg" height= "590px" width= "400px" onmouseover="this.src='ian1.jpg'" height= "590px" width= "400px" onmouseout="this.src='ian2.jpg'" height= "590px" width= "400px"
+             /> <p><center>The Arizona Series</center></p>
+    </div>
+    <div class="w3-col m4">
+        <img class="mySlides" src="miaslide/mia1.jpg" style="width:100%">
+        <img class="mySlides" src="miaslide/mia3.jpg" style="width:100%">
+        <img class="mySlides" src="miaslide/mia6.jpg" style="width:100%">
+        <img class="mySlides" src="miaslide/mia5.jpg" style="width:100%">
+        <p><center>The Black and White Series</center></p>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+        </script>
+    </div>
+    <div class="w3-col m4">
+        <img src="beach1%202.jpg" height= "590px" width= "400px" onmouseover="this.src='beach1.jpg'" height= "590px" width= "400px" onmouseout="this.src='beach1%202.jpg'" height= "590px" width= "400px"/>
+        <p><center>The Senery Series </center></p>
+    </div>
+    </div>
+
+    <div class="w3-row">
+        <div class="w3-col w3-black w3-container" style="width:20%"><h2><center>Arizona</center></h2>
+        </div>
+   
+        <div class="w3-col w3-white w3-container w3-border w3-animate-fading" style="width:60%"><h1><center>Photography Adventures</center></h1></div>
+  
+        <div class="w3-col w3-black w3-container " style="width:20%"><h2><center>Chicago</center></h2></div>
+    </div>
+
+    <div class="w3-row-padding">
+            <div class="w3-col m6 w3-black w3-border-bottom w3-border-white">
+            <img src="az7.jpg"  width= 100% onmouseover="this.src='az8.jpg'"  width= 100% onmouseout="this.src='az7.jpg'" width= "100%"/>
+            </div>
+        <div class="w3-col m6 w3-black w3-border-bottom w3-border-white">
+            <img src="chi1.jpg"  width= 100% onmouseover="this.src='chi2.jpg'"  width= 100% onmouseout="this.src='chi1.jpg'" width= "100%"/>
+        </div>
+      
+        <div action="form.asp" class="w3-card-4">
+            <div class="w3-container w3-black">
+                <h2><center>Photography Inquiries</center></h2>
+            </div>
+        <form class="w3-container" action="form.asp">
+            <p>      
+            <label class="w3-label w3-text-yellow"><b>First and Last Name</b></label>
+            <input class="w3-input w3-border w3-black" name="first" type="text"></p>
+            <p>      
+            <label class="w3-label w3-text-yellow"><b>Email</b></label>
+            <input class="w3-input w3-border w3-black" name="last" type="text"></p>
+            <p>
+            <button class="w3-btn w3-yellow"><center>Send</center></button>
+            </p>
+        </form>
+        </div>
+    </div>      
+</body>
+</html>     
